@@ -1,8 +1,9 @@
+# vi: set ft=ruby :
 
 guard 'shell' do
 
 	# anytime a *.go file changes ...
-  watch(%r{.*\.go$}) do |m|
+  watch(%r{.*\.go$}) do |match|
 
 		# announce we're going to build
 		system('echo `date "+%H:%M:%S"` - building')
